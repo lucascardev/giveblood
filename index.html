@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>💓 Give love, give blood. 💓</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">D❤️E</h1>
+        <h2>A sua doação importa</h2>
+        <p>Você salta até três vidas com uma doação</p>
+        <p>Mais de 30000 doações sao necessárias todos os dias</p>
+        <p>1.9% da população brasileira doa sangue</p>
+        <button>Quero ajudar</button>
+    </header>
+
+    <section class="form hide">
+        <h2>Entre na lista de doadores</h2>
+        <form action="/" method="POST">
+            <input type="text" name="name" placeholder="Nome completo">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="blood" placeholder="tipo sanguíneo">
+            <button>Quero ajudar</button>
+        </form>
+    </section>
+
+    <main>
+        <h2>Ultimos <span>doadores</span></h2>
+        <section class="donors">
+
+            {% for donor in donors %}
+
+            <div class="donor">
+                <div class="blood">{{donor.blood}}</div>
+                <p>{{donor.name}}{{ i }}</p>
+            </div>
+            {%endfor%}
+        
+        </section>
+    </main>
+
+    <footer>Com 😍 RocketSeat</footer>
+
+</body>
+
+<script src="/public/script.js"></script>
+
+</html>
